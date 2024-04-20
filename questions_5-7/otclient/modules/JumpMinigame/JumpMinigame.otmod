@@ -1,0 +1,9 @@
+Module
+  name: JumpMinigame
+  description: Click on the jump button for fun.
+  author: Chris Regan
+  website: 
+  sandboxed: true
+  scripts: [ JumpMinigame ]
+  @onLoad: init()
+  @onUnload: terminate()
