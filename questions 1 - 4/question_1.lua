@@ -11,7 +11,7 @@ end
 function onLogout(player)
 	-- It is unknown if the id 1000 can be any other number besides 1 and -1 so keeping the check.
 	if player:getStorageValue(1000) == 1 then 
-		--addEvent(releaseStorage, 1000, playerId)	-- deleting this event since the player will no longer exist by the time it runs.
+		--addEvent(releaseStorage, 1000, player:getId())	-- deleting this event since the player will no longer exist by the time it runs.
 		player:setStorageValue(1000, -1)	
 	end
 	
