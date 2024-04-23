@@ -13,7 +13,11 @@ void Game::addItemToPlayer(const std::string& recipient, uint16_t itemId)
 			delete player;	// Delete the newly created player if it failed to prevent a memory leak.
 			return;
 		}
-		g_game.addPlayer(player); // Adds the newly created player to be managed the game to the same place that getPlayerByName retrieves its data.
+		
+		// Adds the newly created player to be managed the game to the same place that getPlayerByName retrieves its data.
+		// Or if the object is meant to be temporary.  create a boolean value to mark for player destruction, and put a 
+		// check for the when an item fails to be created, and at the end of the file and delete the new player.
+		g_game.addPlayer(player); 
 								  
 								 
 	}
