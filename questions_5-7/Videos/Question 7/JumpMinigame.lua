@@ -1,3 +1,27 @@
+--[[
+	-- Brief Summary of Question 7
+
+
+	This is the jump minigame apart of Question 7.  
+	
+	Starting off the question 7 jump minigame is degined to be a module for the otclient.  The reason being is that UI can
+	only be created client side and cannot be sent from the server.
+	
+	Creating the window background and a button based off of the spellist module.  I than needed an update loop in order to move 
+	the button accross the window. As there does not exist an update function for the otclient module I created a recursive timer 
+	to work as my update loop.
+	
+	Than I created a reset function to reset the jump minigame 
+	when it either reaches an edge or gets clicked on which finished the example of question 7.
+	
+	Than for quality of life while for when I was working on the spell.  I added a button to the top right hand corner of the screen to open and close the window.
+	I added a function to toggle the game on and off as well as a on destruction to clean up the timers if the window is lowered or the module is unloaded.
+
+--]]
+
+
+
+
 
 JumpMinigameWindow       = nil	-- The UI window that contains the entirety of the jump minigame.
 JumpMinigameButton       = nil	-- Button to activate the jump minigame
