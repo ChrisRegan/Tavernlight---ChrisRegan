@@ -37,7 +37,7 @@ void Effect::drawEffect(const Point& dest, float scaleFactor, bool animate, int 
     if(m_id == 0)
         return;
     
-    // Shifts the offset to the right to make the ice tornados appear.
+    // Shifts the offset to the right to make the ice tornados visually appear.
     offsetX += this->offsetX;
 
     int animationPhase = 0;

@@ -1,5 +1,3 @@
-
-
 local combat={}
 
 
@@ -69,7 +67,7 @@ function onGetFormulaValues(player, level, magicLevel)
 	return -min, -max
 end
 
--- Exit early if no area was set.
+-- Exit early if no area was set. If there is no area dont want to register the spell to prevent the player from expending resources for no reason.
 if combat[1] == nil then
 	return;
 end
@@ -82,7 +80,7 @@ function spellAnimation(cid, variant, framNum)
 end
 
 
-
+-- Built in function of forgotten server which is called when a player or creature casts a spell.
 function spell.onCastSpell(creature, variant)
 	-- When to refresh the large tornados.  As the large tornades have a longer animation than the smaller ones
 	-- Set the baseline reset of the loop based on that.  Since the large tornadoes do not despawn until the end of the spell.
