@@ -92,12 +92,7 @@ function spell.onCastSpell(creature, variant)
 	local cid = creature:getId()
 
 	-- Offset used to get the right area info. If position is the same offset the value by 4.
-	local isSame = 0
-
-	for k, v in pairs(variant.pos) do
-		print(k)
-		print(v)
-	end
+	local isSame = 0;
 
 	-- The animation for the spell is repeated 3 times sequentially through all 4 areas.
 	-- So to do that I started with the approximate timings I gathered from the video first batch of animations.
